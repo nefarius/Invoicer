@@ -68,7 +68,7 @@ namespace Invoicer.Services.Impl
         {
             CreateDocument();
 
-            PdfDocumentRenderer renderer = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always);
+            PdfDocumentRenderer renderer = new PdfDocumentRenderer(true);
             renderer.Document = Pdf;
             renderer.RenderDocument();
             if (!string.IsNullOrEmpty(password))
